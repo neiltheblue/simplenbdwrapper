@@ -24,4 +24,4 @@ do
 done
 
 echo ${CMD}
-/usr/sbin/xnbd-wrapper ${CMD}
+/usr/sbin/xnbd-wrapper -lport 10809 ${CMD}
