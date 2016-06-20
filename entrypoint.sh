@@ -9,7 +9,7 @@ do
    ;;
    --readonly) CMD="--readonly ${CMD}"
    ;;
-   *) if [ -d $1]
+   *) if [ -d $1 ]
     then
       for F in $(ls $1)
       do
@@ -20,8 +20,8 @@ do
     fi
    ;;
   esac
-  
   shift
 done
 
+echo ${CMD}
 /usr/sbin/xnbd-wrapper ${CMD}
