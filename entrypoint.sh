@@ -9,7 +9,15 @@ do
    ;;
    --readonly) CMD="--readonly ${CMD}"
    ;;
-   *) CMD="${CMD} --imgfile $1"
+   *) if [ -d $1]
+    then
+      for F in $(ls $1)
+      do
+        CMD="${CMD} --imgfile ${1}/${F}"
+      done
+    else
+      CMD="${CMD} --imgfile $1"
+    fi
    ;;
   esac
   
