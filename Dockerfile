@@ -5,6 +5,6 @@ RUN apt install -y xnbd-server
 
 COPY entrypoint.sh /entrypoint.sh
 
-EXPOSE 10809
+EXPOSE 8520
 
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]

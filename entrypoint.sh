@@ -23,5 +23,4 @@ do
   shift
 done
 
-echo ${CMD}
-/usr/sbin/xnbd-wrapper -lport 10809 ${CMD}
+/usr/sbin/xnbd-wrapper ${CMD}
