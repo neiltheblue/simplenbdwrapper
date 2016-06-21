@@ -10,7 +10,7 @@ The basic format is:
 docker run -d \
 --name nbd \
 -v <local_block_dir>:<container_block_dir>
--p "8520:8520" \
+-p "10809:8520" \
 neiltheblue/simplenbdwrapper \
 <container_block_dir>[/<img_file>] ...
 ```
@@ -21,7 +21,7 @@ Where `<local_block_dir>` is a directory on your host with block devices to expo
 docker run -d \
 --name nbd \
 -v /images:/block
--p "8520:8520" \
+-p "10809:8520" \
 neiltheblue/simplenbdwrapper \
 /block/disk1.img /block/disk2.img
 ```
